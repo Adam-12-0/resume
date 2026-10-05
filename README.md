@@ -1,6 +1,6 @@
-# Adam Bawatneh CV
+# Adam Bawatneh Resume
 
-This repository contains the LaTeX source and compiled PDF for my academic and research CV.
+This repository contains the LaTeX source and compiled PDF for my research-focused resume.
 
 ## Build
 
