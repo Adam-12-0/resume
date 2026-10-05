@@ -1,86 +1,79 @@
-\documentclass[11pt]{article}
-\usepackage[margin=0.72in]{geometry}
+\documentclass[10pt]{article}
+\usepackage[margin=0.60in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{titlesec}
 
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{4pt}{4pt}
-\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=*}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=1pt, parsep=0pt, partopsep=0pt}
+
+\newcommand{\cvsection}[1]{\vspace{6pt}\noindent{\large\bfseries #1}\par\vspace{2pt}\hrule\vspace{3pt}}
+
+\newcommand{\entry}[3]{%
+  \textbf{#1}\hfill #2\\[-1pt]
+  #3\par
+}
 
 \begin{document}
 
 \begin{center}
-{\Large \textbf{Adam Bawatneh}} \\[4pt]
-Orlando, FL \;|\; Mobile: (718) 781-7009 \\[2pt]
-\href{mailto:Adam.Bawatneh@ucf.edu}{Adam.Bawatneh@ucf.edu} \;|\;
-\href{https://adam-12-0.github.io/}{adam-12-0.github.io} \;|\;
-\href{https://www.linkedin.com/in/adam-bawatneh-221a61290/}{linkedin.com/in/adam-bawatneh}
-% \href{https://github.com/Adam-12-0}{github.com/Adam-12-0}
+{\LARGE\textbf{Adam Bawatneh}}\\[3pt]
+Orlando, Florida \;|\; (718) 781-7009 \;|\;
+\href{mailto:Adam.Bawatneh@ucf.edu}{Adam.Bawatneh@ucf.edu}\\[2pt]
+\href{https://adam-12-0.github.io/}{Website} \;|\;
+\href{https://github.com/Adam-12-0}{GitHub} \;|\;
+\href{https://www.linkedin.com/in/adam-bawatneh-221a61290/}{LinkedIn}
 \end{center}
 
-\section*{Summary}
-PhD Computer Science student at UCF specializing in AI research, LLM/VLM evaluation, and Computer Vision.
-Experienced in benchmark construction, prompt engineering, cloud APIs, and GPU/HPC model evaluation.
-Seeking AI / Machine Learning research internships.
+\cvsection{Research Interests}
+Large language and multimodal models, social reasoning, benchmark construction and evaluation, computer vision, responsible AI.
 
-\section*{Education}
-
-\noindent\textbf{University of Central Florida (UCF)} \hfill Orlando, FL
-
-\noindent Doctor of Philosophy (PhD), Computer Science \hfill Fall 2025 -- Present \\
-\noindent GPA: 4.00
-
+\cvsection{Education}
+\entry{University of Central Florida}{Orlando, Florida}{Ph.D. in Computer Science \hfill Fall 2025 -- Present\\GPA: 4.00/4.00}
 \vspace{3pt}
+\entry{University of Central Florida}{Orlando, Florida}{B.S. in Computer Science \hfill Spring 2025}
 
-\noindent Bachelor of Science, Computer Science \hfill Spring 2025
+\cvsection{Selected Publication}
+\textbf{Adam Bawatneh}, Sagar Sapkota, Amrit Singh Bedi, Santu Karmaker, and Mubarak Shah.
+``\href{https://arxiv.org/abs/2605.26322}{OmniToM: Benchmarking Theory of Mind in LLMs via Explicit Belief Modeling}.''
+Accepted to \textit{NeurIPS 2026}, Evaluations \& Datasets Track.\\
+\textit{arXiv:2605.26322} \;|\; \href{https://adam-12-0.github.io/omnitom-project/}{Project page} \;|\;
+\href{https://github.com/Adam-12-0/omnitom-benchmark}{Benchmark}
 
-\section*{Research and Projects}
-
-\noindent\textbf{OmniToM -- LLM Social Reasoning Evaluation Benchmark} \hfill Oct 2025 -- Present
+\cvsection{Research Experience and Projects}
+\entry{OmniToM: LLM Social Reasoning Evaluation Benchmark}{Oct 2025 -- Present}{Research project, University of Central Florida}
 \begin{itemize}
-  \item Leading development of an LLM social-reasoning benchmark with 895 stories, 22,343 structured propositions, and 156,401 total labels, requiring 1,000+ human annotation hours across multiple review rounds.
-  \item Managed 11 annotators across multiple teams to build a human-calibrated LLM annotation pipeline for scalable benchmark construction, calibration, and quality control.
-  \item Applied structured prompt-engineering techniques for task conditioning, calibration, and reliable outputs.
-  \item Deployed closed-source LLM evaluations through Azure, Azure OpenAI, Anthropic, and Google Vertex AI, using parallelized API calls and batch processing to reduce runtime and cost.
-  \item Ran open-source LLM evaluations on university and national HPC clusters, including a PI-managed NSF ACCESS Delta allocation, across model families and quantization settings.
-  \item Delivered benchmark tables, performance visualizations, and comparative model analyses.
+  \item Co-developed a benchmark from 895 stories with 22,343 structured belief propositions and 156,401 labels, using a human-validated annotation pipeline developed with 11 annotators and about 1.1K person-hours of annotation work.
+  \item Coordinated annotation quality control and validation, and designed structured prompts for belief extraction and seven-dimension belief labeling.
+  \item Evaluated API and open-weight models across Azure OpenAI, Anthropic, Google Vertex AI, and university and NSF ACCESS HPC resources; built parallel and batch evaluation workflows for model comparison.
 \end{itemize}
 
-\vspace{2pt}
-
-\noindent\textbf{BIAS-101 -- Video Action Recognition Benchmark Design} \hfill Jan 2025 -- Apr 2025
+\entry{BIAS-101: Demographic Bias in Video Action Recognition}{Jan 2025 -- Apr 2025}{Research project, University of Central Florida}
 \begin{itemize}
-  \item Collaborated in a 4-member team to design a video action-recognition benchmark focused on dataset balance, diversity, and evaluation quality.
-  \item Built a large-scale data collection and filtering pipeline using external video sources, platform APIs, automated quality-control filters, VLMs, visual encoders, and multimodal annotation.
-  \item Processed 85k+ candidate videos and added 2k+ curated clips to rebalance a subset of the UCF-101 action-recognition dataset.
+  \item Built a video collection and filtering pipeline using platform APIs, automated quality checks, vision-language models, and multimodal annotation to audit demographic representation in UCF-101.
+  \item Processed more than 85,000 candidate videos and added more than 2,000 curated clips for dataset rebalancing; assessed demographic patterns with statistical tests and a dominance-ratio measure.
 \end{itemize}
 
-\vspace{2pt}
-
-\noindent\textbf{DETECT -- Deception Tracking Through Eye Cues Technology} \hfill Aug 2024 -- Apr 2025
+\entry{DETECT: Deception Tracking Through Eye Cues Technology}{Aug 2024 -- Apr 2025}{Faculty-advised, 6-member team project}
 \begin{itemize}
-  \item Led a 6-member faculty-advised team building a real-time deception-cue analysis system.
-\item Built real-time gaze and facial-signal tracking with MediaPipe, achieving 80\%+ gaze-tracking accuracy.
-\item Built and deployed a full-stack system with Astro, Go, PostgreSQL, Docker, and DigitalOcean.
-  \item Managed sprint planning, code integration, and technical reviews using JIRA and GitHub.
+  \item Led development of a real-time gaze and facial-signal tracking system using MediaPipe FaceMesh, with reported gaze-tracking accuracy above 80\% in the project evaluation.
+  \item Built and deployed the full-stack application using Astro, Go, PostgreSQL, Docker, and DigitalOcean.
 \end{itemize}
 
-\section*{Experience}
+\entry{CLEAR: Video Denoising Evaluation}{}{Research project, University of Central Florida}
+Compared traditional and AI-based denoisers on more than 13,000 videos, using Python and OpenCV to generate noise conditions and PSNR, SSIM, and VIF to evaluate output quality.
 
-\noindent\textbf{University of Central Florida -- Undergraduate Teaching Assistant} \hfill May 2023 -- Spring 2025
-\begin{itemize}
-  \item Led labs and instruction for C, Python, and Java courses within the Computer Science curriculum.
-  \item Mentored first-time programmers by translating complex technical concepts into accessible explanations.
-  \item Collaborated with instructors to support large course sections serving 1,500+ students.
-\end{itemize}
+\cvsection{Teaching Experience}
+\entry{Undergraduate Teaching Assistant, University of Central Florida}{May 2023 -- Spring 2025}{Computer Science courses in C, Python, and Java}
+Supported lab instruction and student mentoring in course sections serving more than 1,500 students.
 
-\section*{Skills}
-\begin{itemize}
-  \item \textbf{Programming:} Python, C/C++, Java, JavaScript, Go, SQL
-  \item \textbf{AI Engineering:} LLMs/VLMs, prompt engineering, benchmark design, LLM evaluation
-  \item \textbf{AI / Cloud Platforms:} Azure, Google Cloud, Hugging Face, ChatGPT, Claude, Gemini, Codex
-  \item \textbf{Developer Tools:} GitHub, VS Code, Linux, Docker, PostgreSQL, REST APIs, LaTeX, JIRA
-\end{itemize}
+\cvsection{Technical Skills}
+\textbf{Programming:} Python, C/C++, Java, JavaScript, Go, SQL\\
+\textbf{AI and evaluation:} LLM/VLM evaluation, benchmark design, prompt engineering, multimodal annotation, computer vision\\
+\textbf{Platforms and APIs:} Azure OpenAI, Anthropic API, Google Vertex AI, Hugging Face, Azure, Google Cloud, HPC\\
+\textbf{Tools:} Git/GitHub, Linux, Docker, PostgreSQL, REST APIs, LaTeX, Jira
 
 \end{document}
