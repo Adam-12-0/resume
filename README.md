@@ -1,6 +1,6 @@
 # Adam Bawatneh Resume
 
-This repository contains my research-focused resume and a Databricks PhD GenAI Research Scientist Intern cover letter, with LaTeX sources and compiled PDFs.
+This repository contains my research-focused resume and cover letters for Databricks and Pinterest, with LaTeX sources and compiled PDFs.
 
 ## Build
 
@@ -16,6 +16,12 @@ The Databricks cover letter is a standalone document. Compile it with:
 
 ```sh
 ./scripts/latexmk-tinytex-wrapper.sh -pdf -jobname=Cover_Letter_Databricks cover_letter_databricks.tex
+```
+
+The Pinterest cover letter is a standalone document. Compile it with:
+
+```sh
+./scripts/latexmk-tinytex-wrapper.sh -pdf -jobname=Cover_Letter_Pinterest cover_letter_pinterest.tex
 ```
 
 In Overleaf, choose the desired file under **Menu → Main document**, then recompile. The resume remains `main.tex`.
