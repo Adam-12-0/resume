@@ -1,6 +1,6 @@
 # Adam Bawatneh Resume
 
-This repository contains my research-focused resume and separate Adobe and Amazon research internship cover letters, with LaTeX sources and compiled PDFs.
+This repository contains my research-focused resume and a Databricks PhD GenAI Research Scientist Intern cover letter, with LaTeX sources and compiled PDFs.
 
 ## Build
 
@@ -12,11 +12,10 @@ To compile the resume from a terminal on this Mac:
 ./scripts/latexmk-tinytex-wrapper.sh -pdf -interaction=nonstopmode -synctex=1 -file-line-error main.tex
 ```
 
-The cover letters are standalone documents. Compile them separately:
+The Databricks cover letter is a standalone document. Compile it with:
 
 ```sh
-./scripts/latexmk-tinytex-wrapper.sh -pdf -jobname=Cover_Letter_Adobe cover_letter_adobe.tex
-./scripts/latexmk-tinytex-wrapper.sh -pdf -jobname=Cover_Letter_Amazon cover_letter_amazon.tex
+./scripts/latexmk-tinytex-wrapper.sh -pdf -jobname=Cover_Letter_Databricks cover_letter_databricks.tex
 ```
 
 In Overleaf, choose the desired file under **Menu → Main document**, then recompile. The resume remains `main.tex`.
