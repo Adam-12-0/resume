@@ -1,9 +1,13 @@
 \documentclass[10pt]{article}
 \usepackage[margin=0.58in]{geometry}
+\usepackage{cmap}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
@@ -11,15 +15,15 @@
 \setlist[itemize]{leftmargin=1.15em, itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt}
 
 \newcommand{\cvsection}[1]{\vspace{5pt}\noindent{\large\bfseries #1}\par\vspace{2pt}\hrule\vspace{2pt}}
-\newcommand{\entry}[3]{\textbf{#1}\hfill #2\\[-1pt]#3\par}
+\newcommand{\entry}[3]{#1 | #2\\[-1pt]#3\par}
 
 \begin{document}
 \begin{center}
 {\LARGE\textbf{Adam Bawatneh}}\\[2pt]
-Orlando, Florida \;|\; (718) 781-7009 \;|\; \href{mailto:adambawatneh01@gmail.com}{adambawatneh01@gmail.com}\\[1pt]
-\href{https://adam-12-0.github.io/}{Website} \;|\;
-\href{https://github.com/Adam-12-0}{GitHub} \;|\;
-\href{https://www.linkedin.com/in/adam-bawatneh-221a61290/}{LinkedIn}
+Orlando, Florida \;|\; Home Phone: (718) 781-7009 \;|\; Email: \href{mailto:adambawatneh01@gmail.com}{adambawatneh01@gmail.com}\\[1pt]
+\href{https://adam-12-0.github.io/}{adam-12-0.github.io} \;|\;
+\href{https://github.com/Adam-12-0}{github.com/Adam-12-0} \;|\;
+\href{https://www.linkedin.com/in/adam-bawatneh-221a61290/}{linkedin.com/in/adam-bawatneh-221a61290}
 \end{center}
 
 \cvsection{Research Interests}
@@ -27,20 +31,20 @@ Social reasoning and Theory of Mind, mental-state representations, and how AI sy
 Interested in exploring these questions across language and multimodal settings, including generative AI and agent systems.
 
 \cvsection{Education}
-\entry{University of Central Florida}{Orlando, Florida}{Ph.D. in Computer Science \hfill Fall 2025 -- Spring 2029 (expected); GPA: 4.00/4.00}
-\entry{University of Central Florida}{Orlando, Florida}{B.S. in Computer Science \hfill Spring 2025}
+\textbf{Ph.D. in Computer Science}, University of Central Florida | Fall 2025 -- Present (expected Spring 2029) | GPA: 4.00/4.00\par
+\textbf{Bachelor of Science in Computer Science (B.S.)}, University of Central Florida | Aug 2022 -- May 2025\par
 
-\cvsection{Selected Publication}
+\cvsection{Publications}
 \textbf{Adam Bawatneh}\textsuperscript{*}, Sagar Sapkota, Amrit Singh Bedi, Santu Karmaker, and Mubarak Shah.\\
 \textquotedblleft\href{https://arxiv.org/abs/2605.26322}{OmniToM: Benchmarking Theory of Mind in LLMs via Explicit Belief Modeling}.\textquotedblright\\
 \textit{NeurIPS 2026}, Evaluations \& Datasets Track. \href{https://adam-12-0.github.io/omnitom-project/}{Project} \;|\; \href{https://github.com/Adam-12-0/omnitom-benchmark}{Benchmark}
 
-\cvsection{Research Experience}
+\cvsection{Experience}
 \entry{Graduate Research Assistant, University of Central Florida}{May 2026 -- Present}{Conduct AI research and contribute to government proposal development, including IARPA-focused proposals.}
 \entry{Undergraduate Teaching Assistant, University of Central Florida}{May 2023 -- Spring 2025}{Led labs and mentored students in C, Python, and Java courses serving more than 1,500 students.}
 
-\cvsection{Selected Research Projects}
-\textbf{OmniToM: Social Reasoning Evaluation for LLMs}\hfill Oct 2025 -- Present\par
+\cvsection{Projects}
+OmniToM: Social Reasoning Evaluation for LLMs | Oct 2025 -- Present\par
 \begin{itemize}
   \item Led development of a benchmark spanning 895 stories and coordinated quality review with 11 annotators across more than 1,100 hours.
   \item Tested commercial and open models via Azure OpenAI, Anthropic API, and Google Vertex AI.
@@ -56,11 +60,11 @@ Interested in exploring these questions across language and multimodal settings,
 Conference reviewer: NeurIPS, AAAI, and ACL.
 
 \cvsection{Technical Skills}
-\textbf{Research:} Social reasoning, Theory of Mind, research design, benchmarking, experimental analysis\\
-\textbf{AI:} Natural language processing, machine learning, language models, model evaluation, responsible AI\\
-\textbf{Programming:} Python, C/C++, Java, JavaScript, Go, SQL\\
-\textbf{Model Platforms:} Azure OpenAI, Anthropic API, Google Vertex AI, Hugging Face\\
-\textbf{Cloud and HPC:} Microsoft Azure, Google Cloud, NSF ACCESS\\
-\textbf{Tools:} Git/GitHub, Linux, Docker, PostgreSQL, REST APIs, LaTeX
+Research Skills: Social reasoning, Theory of Mind, research design, benchmarking, experimental analysis\\
+AI Skills: Natural language processing, machine learning, language models, model evaluation, responsible AI\\
+Programming: Python, C/C++, Java, JavaScript, Go, SQL\\
+Model Platforms: Azure OpenAI, Anthropic API, Google Vertex AI, Hugging Face\\
+Cloud and HPC: Microsoft Azure, Google Cloud, NSF ACCESS\\
+Tools: Git/GitHub, Linux, Docker, PostgreSQL, REST APIs, LaTeX
 
 \end{document}
