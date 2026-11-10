@@ -1,6 +1,6 @@
 # Adam Bawatneh Resume
 
-This repository contains my research-focused resume and cover letters for Databricks and Pinterest, with LaTeX sources and compiled PDFs.
+This repository contains my research resume, its LaTeX source, and the compiled PDF.
 
 ## Build
 
@@ -12,19 +12,7 @@ To compile the resume from a terminal on this Mac:
 ./scripts/latexmk-tinytex-wrapper.sh -pdf -interaction=nonstopmode -synctex=1 -file-line-error main.tex
 ```
 
-The Databricks cover letter is a standalone document. Compile it with:
-
-```sh
-./scripts/latexmk-tinytex-wrapper.sh -pdf -jobname=Cover_Letter_Databricks cover_letter_databricks.tex
-```
-
-The Pinterest cover letter is a standalone document. Compile it with:
-
-```sh
-./scripts/latexmk-tinytex-wrapper.sh -pdf -jobname=Cover_Letter_Pinterest cover_letter_pinterest.tex
-```
-
-In Overleaf, choose the desired file under **Menu → Main document**, then recompile. The resume remains `main.tex`.
+The main document in Overleaf is `main.tex`.
 
 ## Git remotes
 
